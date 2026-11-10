@@ -7,5 +7,5 @@ title: 持续学习
 <section id="posts"><div class="section-title"><h2>最近的记录</h2><span class="small">{{ site.posts.size }} / NOTES</span></div>
 {% for post in site.posts %}<article class="post"><p class="meta">{{ post.date | date: "%Y.%m.%d" }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p class="excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p><a class="read" href="{{ post.url | relative_url }}">阅读全文 ↗</a></article>{% endfor %}</section>
 <section id="archive"><div class="section-title"><h2>归档</h2><span class="small">ARCHIVE</span></div>{% for post in site.posts %}<p style="display:flex;justify-content:space-between;gap:20px;font-size:14px"><a href="{{ post.url | relative_url }}">{{ post.title | escape }} ↗</a><span class="small">{{ post.date | date: "%Y.%m.%d" }}</span></p>{% endfor %}</section>
-<section id="about" class="about"><h2>关于 Findpie</h2><div><p>你好，我是 FindPie。<br>这里是我的个人博客，记录学习、实践与思考。<br>保持好奇，持续学习。</p><a href="https://github.com/FindPie" target="_blank" rel="noopener noreferrer">在 GitHub 找到我 ↗</a></div></section>
+
 </main>
