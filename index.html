@@ -5,7 +5,7 @@ title: 持续学习
 <main><section class="hero"><div class="eyebrow">A PLACE TO THINK & GROW</div><h1>持续学习<span style="color:var(--accent)">。</span></h1><p class="intro">记录学习中的发现、实践和思考。<br>让每一次好奇，都留下一点痕迹。</p>
 <svg class="sprout" viewBox="0 0 100 120" fill="none" aria-hidden="true"><path d="M50 110V55M50 82C20 81 14 62 14 43C39 42 51 58 50 82ZM50 59C50 32 65 16 88 14C90 39 75 58 50 59Z" stroke="#6b805c" stroke-width="1.5"/><path d="M30 114H70" stroke="#6b805c" stroke-width="1.5"/></svg></section>
 <section id="posts"><div class="section-title"><h2>最近的记录</h2><span class="small">{{ site.posts.size }} / NOTES</span></div>
-{% for post in site.posts %}<article class="post"><p class="meta">{{ post.date | date: "%Y.%m.%d" }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p class="excerpt">{% capture summary_text %}{% assign content_lines = post.content | strip_html | newline_to_br | split: '<br />' %}{% for line in content_lines %}{% assign clean_line = line | strip %}{% unless clean_line contains '时间:' or clean_line contains '时间：' %}{{ clean_line }} {% endunless %}{% endfor %}{% endcapture %}{{ summary_text | strip | truncate: 100 | escape }}</p><a class="read" href="{{ post.url | relative_url }}">阅读全文 ↗</a></article>{% endfor %}</section>
+{% for post in site.posts %}<article class="post"><p class="meta">{{ post.date | date: "%Y.%m.%d" }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3></article>{% endfor %}</section>
 
 
 </main>
